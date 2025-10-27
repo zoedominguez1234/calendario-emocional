@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendario Socioemocional</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Pantalla de registro -->
+  <div id="registro" class="container fade-in" style="display:block;">
+    <h1>Registro Personal</h1>
+    <input type="text" id="nombre" placeholder="Nombre completo" required>
+    <input type="email" id="correo" placeholder="Correo electrónico" required>
+    <input type="text" id="grupo" placeholder="Grupo o semestre" required>
+    <button onclick="guardarDatos()">Guardar y continuar</button>
+  </div>
+
+  <!-- Árbol de meses -->
+  <div id="arbol" class="arbol fade-in">
+    <div class="mes-btn" onclick="mostrarMes('enero')">
+      <img src="enero.jpg" alt="Enero">
+      <span class="nombre-mes">Enero</span>
+    </div>
+    <div class="mes-btn" onclick="mostrarMes('febrero')">
+      <img src="febrero.jpg" alt="Febrero">
+      <span class="nombre-mes">Febrero</span>
+    </div>
+    <div class="mes-btn" onclick="mostrarMes('marzo')">
+      <img src="marzo.jpg" alt="Marzo">
+      <span class="nombre-mes">Marzo</span>
+    </div>
+    <div class="mes-btn" onclick="mostrarMes('abril')">
+      <img src="abril.jpg" alt="Abril">
+      <span class="nombre-mes">Abril</span>
+    </div>
+    <div class="mes-btn" onclick="mostrarMes('mayo')">
+      <img src="mayo.jpg" alt="Mayo">
+      <span class="nombre-mes">Mayo</span>
+    </div>
+    <div class="mes-btn" onclick="mostrarMes('junio')">
+      <img src="junio.jpg" alt="Junio">
+      <span class="nombre-mes">Junio</span>
+    </div>
+    <div class="mes-btn" onclick="mostrarMes('julio')">
+      <img src="julio.jpg" alt="Julio">
+      <span class="nombre-mes">Julio</span>
+    </div>
+    <div class="mes-btn" onclick="mostrarMes('agosto')">
+      <img src="agosto.jpg" alt="Agosto">
+      <span class="nombre-mes">Agosto</span>
+    </div>
+    <div class="mes-btn" onclick="mostrarMes('septiembre')">
+      <img src="septiembre.jpg" alt="Septiembre">
+      <span class="nombre-mes">Septiembre</span>
+    </div>
+    <div class="mes-btn" onclick="mostrarMes('octubre')">
+      <img src="octubre.jpg" alt="Octubre">
+      <span class="nombre-mes">Octubre</span>
+    </div>
+    <div class="mes-btn" onclick="mostrarMes('noviembre')">
+      <img src="noviembre.jpg" alt="Noviembre">
+      <span class="nombre-mes">Noviembre</span>
+    </div>
+    <div class="mes-btn" onclick="mostrarMes('diciembre')">
+      <img src="diciembre.jpg" alt="Diciembre">
+      <span class="nombre-mes">Diciembre</span>
+    </div>
+  </div>
+
+  <!-- Contenedor del mes -->
+  <div id="infoMes" class="container fade-in">
+    <img id="imagenMes" src="" alt="">
+    <h2 id="tituloMes"></h2>
+    <p id="descripcionMes"></p>
+
+    <textarea id="sugerencia" placeholder="Escribe tu sugerencia aquí..."></textarea>
+    <button onclick="guardarSugerencia()">Enviar sugerencia</button>
+    <button class="volver" onclick="volverArbol()">Volver al árbol</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
