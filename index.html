@@ -4,16 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calendario Socioemocional</title>
-  <link rel="stylesheet" href="script.css">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Forzar que la ventana de registro se vea al cargar -->
+  <style>
+    #registro {
+      display: block !important;
+    }
+  </style>
 </head>
 <body>
   <!-- Pantalla de registro -->
-  <div id="registro" class="container fade-in" style="display:block;">
+  <div id="registro" class="container fade-in">
     <h1>Registro Personal</h1>
     <input type="text" id="nombre" placeholder="Nombre completo" required>
     <input type="email" id="correo" placeholder="Correo electrónico" required>
     <input type="text" id="grupo" placeholder="Grupo o semestre" required>
-    <button onclick="guardarDatos()">Guardar y continuar</button>
+    <button onclick="guardarBtn()">Guardar y continuar</button>
   </div>
 
   <!-- Árbol de meses -->
@@ -83,12 +90,7 @@
   <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore-compat.js"></script>
 
+  <!-- Script principal -->
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
